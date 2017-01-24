@@ -2,7 +2,7 @@
 //  Item+CoreDataProperties.swift
 //  DreamList
 //
-//  Created by Neven on 22/01/2017.
+//  Created by Neven Hsu on 24/01/2017.
 //  Copyright © 2017 Neven. All rights reserved.
 //
 
@@ -18,7 +18,7 @@ extension Item {
 
     @NSManaged public var created: NSDate?
     @NSManaged public var price: Double
-    @NSManaged public var store: String?
+    @NSManaged public var details: String?
     @NSManaged public var title: String?
     @NSManaged public var toImage: Image?
     @NSManaged public var toItemType: ItemType?

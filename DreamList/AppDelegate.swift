@@ -9,6 +9,7 @@
 import UIKit
 import CoreData
 
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -90,4 +91,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
 }
+
+var ad = UIApplication.shared.delegate as! AppDelegate
+var context = ad.persistentContainer.viewContext
 

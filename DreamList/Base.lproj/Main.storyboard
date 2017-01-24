@@ -34,22 +34,22 @@
                                 </segments>
                                 <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                             </segmentedControl>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="172" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="b6i-1F-rBe">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="172" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="b6i-1F-rBe">
                                 <rect key="frame" x="16" y="108" width="343" height="559"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="172" id="IvF-k5-T3k" customClass="ItemCell" customModule="DreamList" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ItemCell" rowHeight="172" id="IvF-k5-T3k" customClass="ItemCell" customModule="DreamList" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="343" height="172"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="IvF-k5-T3k" id="mND-8S-gMQ">
-                                            <rect key="frame" x="0.0" y="0.0" width="343" height="171"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="172"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JW3-n8-bGs">
-                                                    <rect key="frame" x="16" y="16" width="311" height="139"/>
+                                                    <rect key="frame" x="16" y="16" width="311" height="140"/>
                                                     <subviews>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tesla" translatesAutoresizingMaskIntoConstraints="NO" id="xsX-Jc-FDR">
-                                                            <rect key="frame" x="0.0" y="0.0" width="132" height="139"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="132" height="140"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="132" id="GW8-TV-6Kj"/>
                                                             </constraints>
@@ -73,7 +73,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Someday my dream will true and I will own this car.Just you will." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wpb-hb-fPs">
-                                                            <rect key="frame" x="140" y="68" width="167" height="63"/>
+                                                            <rect key="frame" x="140" y="68" width="167" height="64"/>
                                                             <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
                                                             <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                             <nil key="highlightedColor"/>
@@ -147,7 +147,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="sEW-Si-Cdw" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="PIh-VE-DRt">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="PIh-VE-DRt">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

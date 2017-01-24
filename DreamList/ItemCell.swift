@@ -16,15 +16,11 @@ class ItemCell: UITableViewCell {
     @IBOutlet weak var detailLbl: UILabel!
     
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+    func updateUI(item: Item) {
+        titleLbl.text = item.title
+        priceLbl.text = "$ \(item.price)"
+        detailLbl.text = item.details
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
+    
 
 }
