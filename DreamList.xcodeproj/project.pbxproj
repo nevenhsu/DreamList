@@ -23,6 +23,8 @@
 		0BC425131E34E7D000A322E6 /* DreamList.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0BC425111E34E7CF00A322E6 /* DreamList.xcdatamodeld */; };
 		0BC425151E34E7D000A322E6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0BC425141E34E7D000A322E6 /* Assets.xcassets */; };
 		0BC425181E34E7D100A322E6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0BC425161E34E7D100A322E6 /* LaunchScreen.storyboard */; };
+		0BE1BCAD1E3CAC13003FEF77 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE1BCAC1E3CAC13003FEF77 /* CustomTextField.swift */; };
+		0BE1BCAF1E3CBE0E003FEF77 /* ItemDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE1BCAE1E3CBE0E003FEF77 /* ItemDetailVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +46,8 @@
 		0BC425141E34E7D000A322E6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0BC425171E34E7D100A322E6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0BC425191E34E7D100A322E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0BE1BCAC1E3CAC13003FEF77 /* CustomTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		0BE1BCAE1E3CBE0E003FEF77 /* ItemDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemDetailVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +121,7 @@
 			children = (
 				0BC380C01E363D0900CD58AA /* MaterialDesign.swift */,
 				0BC380C21E3650A100CD58AA /* ItemCell.swift */,
+				0BE1BCAC1E3CAC13003FEF77 /* CustomTextField.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -125,6 +130,7 @@
 			isa = PBXGroup;
 			children = (
 				0BC4250C1E34E7CF00A322E6 /* mainVC.swift */,
+				0BE1BCAE1E3CBE0E003FEF77 /* ItemDetailVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -201,6 +207,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0BE1BCAD1E3CAC13003FEF77 /* CustomTextField.swift in Sources */,
 				0B2EF3EB1E379EF200113CE7 /* ItemType+CoreDataClass.swift in Sources */,
 				0BC380C31E3650A100CD58AA /* ItemCell.swift in Sources */,
 				0BC4250D1E34E7CF00A322E6 /* mainVC.swift in Sources */,
@@ -213,6 +220,7 @@
 				0B2EF3EC1E379EF200113CE7 /* ItemType+CoreDataProperties.swift in Sources */,
 				0B2EF3E91E379EF200113CE7 /* Store+CoreDataClass.swift in Sources */,
 				0B2EF3E71E379EF200113CE7 /* Item+CoreDataClass.swift in Sources */,
+				0BE1BCAF1E3CBE0E003FEF77 /* ItemDetailVC.swift in Sources */,
 				0B2EF3E61E379EF200113CE7 /* Image+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
