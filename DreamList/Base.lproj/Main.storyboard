@@ -38,7 +38,7 @@
                                 <rect key="frame" x="16" y="108" width="288" height="460"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ItemCell" rowHeight="172" id="IvF-k5-T3k" customClass="ItemCell" customModule="DreamList" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="ItemCell" rowHeight="172" id="IvF-k5-T3k" customClass="ItemCell" customModule="DreamList" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="288" height="172"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="IvF-k5-T3k" id="mND-8S-gMQ">
@@ -139,7 +139,7 @@
                     <connections>
                         <outlet property="segment" destination="oT6-6i-Ysq" id="NiS-jp-ioJ"/>
                         <outlet property="tableView" destination="b6i-1F-rBe" id="TGG-xB-kpc"/>
-                        <segue destination="qTV-EA-0ki" kind="show" id="5uF-iN-e4b"/>
+                        <segue destination="qTV-EA-0ki" kind="show" identifier="ItemDetailVC" id="5uF-iN-e4b"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -212,6 +212,9 @@
                                 <state key="normal" title="Save Item">
                                     <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="saveItem:" destination="qTV-EA-0ki" eventType="touchUpInside" id="NAF-Ig-aO3"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select Store" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rQ8-4T-dA0">
                                 <rect key="frame" x="16" y="258" width="288" height="18"/>

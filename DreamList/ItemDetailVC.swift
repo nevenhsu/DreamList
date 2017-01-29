@@ -15,6 +15,8 @@ class ItemDetailVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelega
     @IBOutlet weak var detailLbl: CustomTextField!
     @IBOutlet weak var picker: UIPickerView!
     
+    var itemToEdit: Item?
+    
     var stores = [Store]()
 
     
@@ -30,6 +32,11 @@ class ItemDetailVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelega
         
 //        generalTest()
         fetchStore()
+        
+        if itemToEdit != nil {
+            loadItem(item: itemToEdit!)
+        }
+        
         
     }
 
@@ -63,6 +70,64 @@ class ItemDetailVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelega
         }
         
     }
+    
+    
+    func loadItem(item: Item) {
+
+        titleLbl.text = item.title
+        priceLbl.text = "\(item.price)"
+        detailLbl.text = item.details
+        
+        var index = 0
+        repeat {
+            
+            let s = stores[index]
+            if s.name == item.toStore?.name {
+                
+                picker.selectRow(index, inComponent: 0, animated: false)
+                break
+            }
+            
+            index += 1
+        
+        } while index < stores.count
+        
+
+    }
+    
+    
+    @IBAction func saveItem(_ sender: UIButton) {
+        
+        var item: Item!
+        
+        if itemToEdit != nil {
+            item = itemToEdit
+        } else {
+            item = Item(context: context)
+        }
+        
+        
+        if let title = titleLbl.text {
+            item.title = title
+        }
+        
+        if let price = priceLbl.text {
+            item.price = (price as NSString).doubleValue
+        }
+        
+        if let detail = detailLbl.text {
+            item.details = detail
+        }
+        
+        item.toStore = stores[picker.selectedRow(inComponent: 0)]
+            
+        ad.saveContext()
+        
+        _ = navigationController?.popViewController(animated: true)
+        
+    }
+    
+    
     
     func generalTest() {
         

@@ -22,6 +22,8 @@ class mainVC: UIViewController,UITableViewDelegate, UITableViewDataSource, NSFet
         tableView.dataSource = self
         tableView.delegate = self
         
+        
+        
 //        generateTest()
         attemptFetch()
     }
@@ -63,6 +65,21 @@ class mainVC: UIViewController,UITableViewDelegate, UITableViewDataSource, NSFet
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 172
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if let objs = itemFRC.fetchedObjects, objs.count > 0 {
+            let item = objs[indexPath.row]
+            performSegue(withIdentifier: "ItemDetailVC", sender: item)
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ItemDetailVC" {
+            if let destinationVC = segue.destination as? ItemDetailVC {
+                destinationVC.itemToEdit = sender as? Item
+            }
+        }
+    }
 
     func attemptFetch() {
     
@@ -71,6 +88,8 @@ class mainVC: UIViewController,UITableViewDelegate, UITableViewDataSource, NSFet
         fetchRequest.sortDescriptors = [dateSort]
         
         itemFRC = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: context, sectionNameKeyPath: nil, cacheName: nil)
+        
+        itemFRC.delegate = self
             
         do {
             
